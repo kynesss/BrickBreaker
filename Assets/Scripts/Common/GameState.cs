@@ -2,6 +2,7 @@
 {
     public enum GameState
     {
+        Starting,
         Gameplay,
         Paused,
         LevelComplete,

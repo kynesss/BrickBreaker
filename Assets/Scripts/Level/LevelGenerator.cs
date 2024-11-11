@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Common;
 using Obstacles;
 using UnityEngine;
 
@@ -11,6 +13,21 @@ namespace Level
 
         [SerializeField] private float columnSpacing = 4f;
         [SerializeField] private float rowSpacing = 1.45f;
+
+        private void OnEnable()
+        {
+            Services.GameManager.GameStateChanged += OnGameStateChanged;
+        }
+
+        private void OnDisable()
+        {
+            Services.GameManager.GameStateChanged -= OnGameStateChanged;
+        }
+
+        private void OnGameStateChanged(GameState lastState, GameState newState)
+        {
+            Debug.Log($"Last: {lastState} New: {newState}");
+        }
 
         private void Start()
         {
