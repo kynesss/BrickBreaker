@@ -5,7 +5,9 @@ namespace Common
 {
     public class GameManager : MonoBehaviour, IService
     {
-        private GameState _state = GameState.Starting;
+        private int _level;
+
+        private GameState _state = GameState.Idle;
         public GameState State
         {
             get => _state;
@@ -13,18 +15,29 @@ namespace Common
             {
                 if (value == _state)
                     return;
-                
-                GameStateChanged?.Invoke(_state, _state = value);
+
+                var args = new GameStateChangedEventArgs(_state, _state = value, _level);
+                GameStateChanged?.Invoke(args);
             }
         }
 
         public GameStateChangedEvent GameStateChanged;
 
+        private void Start()
+        {
+            StartGame();
+        }
+
+        private void StartGame()
+        {
+            State = GameState.Gameplay;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                State = GameState.Gameplay;
+                State = GameState.GameOver;
             }
         }
     }

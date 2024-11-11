@@ -1,4 +1,4 @@
 ﻿namespace Common.Events
 {
-    public delegate void GameStateChangedEvent(GameState lastState, GameState newState);
+    public delegate void GameStateChangedEvent(GameStateChangedEventArgs args);
 }

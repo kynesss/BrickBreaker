@@ -1,8 +1,9 @@
-using System;
 using System.Collections.Generic;
 using Common;
+using Common.Events;
 using Obstacles;
 using UnityEngine;
+using Utils;
 
 namespace Level
 {
@@ -24,14 +25,12 @@ namespace Level
             Services.GameManager.GameStateChanged -= OnGameStateChanged;
         }
 
-        private void OnGameStateChanged(GameState lastState, GameState newState)
+        private void OnGameStateChanged(GameStateChangedEventArgs args)
         {
-            Debug.Log($"Last: {lastState} New: {newState}");
-        }
-
-        private void Start()
-        {
-            GenerateLevel(0);
+            if (args.NewState != GameState.Gameplay)
+                return;
+            
+            GenerateLevel(args.CurrentLevel);
         }
 
         private void GenerateLevel(int level)
