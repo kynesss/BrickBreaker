@@ -372,8 +372,8 @@ Transform:
   m_Children:
   - {fileID: 1973366059}
   - {fileID: 1765094063}
-  - {fileID: 2057212639}
   - {fileID: 191026284}
+  - {fileID: 2057212639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &822788328861890650
@@ -444,10 +444,6 @@ PrefabInstance:
     - target: {fileID: 4311058156363311438, guid: 844004a7e8afce742b2fceb0fcf3fff3, type: 3}
       propertyPath: m_Name
       value: Paddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4311058156363311438, guid: 844004a7e8afce742b2fceb0fcf3fff3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9153760233128913330, guid: 844004a7e8afce742b2fceb0fcf3fff3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,10 +598,6 @@ PrefabInstance:
     - target: {fileID: 8244130868660639376, guid: f959a6821592255458a59b847c944ec1, type: 3}
       propertyPath: m_Name
       value: Ball
-      objectReference: {fileID: 0}
-    - target: {fileID: 8244130868660639376, guid: f959a6821592255458a59b847c944ec1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

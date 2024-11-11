@@ -6,7 +6,7 @@ namespace Ball
     [RequireComponent(typeof(Rigidbody2D))]
     public class BallMovement : MonoBehaviour
     {
-        [SerializeField] private float speed = 20f;
+        [SerializeField] private float initialSpeed = 10f;
 
         private Rigidbody2D _rb;
         private Vector2 _currentVelocity;
@@ -29,9 +29,9 @@ namespace Ball
         private void AddInitialForce()
         {
             var randomX = Random.Range(-1f, 1f);
-            var direction = new Vector2(randomX, 1f);
+            var direction = new Vector2(randomX, -1f);
             
-            _rb.AddForce(direction * speed, ForceMode2D.Impulse);
+            _rb.AddForce(direction * initialSpeed, ForceMode2D.Impulse);
         }
 
         public void SetVelocity(Vector2 velocity)

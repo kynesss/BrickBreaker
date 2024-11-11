@@ -6,7 +6,7 @@ namespace Paddle
     public class PaddleMovement : MonoBehaviour
     {
         [SerializeField] private float speed = 50f;
-        [SerializeField] private float movementRange = 24.20f;
+        [SerializeField] private float movementRange = 17.53124f;
 
         private PaddleInput _input;
 
