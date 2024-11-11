@@ -33,6 +33,11 @@ namespace Common
             State = GameState.Gameplay;
         }
 
+        public void GameOver()
+        {
+            State = GameState.GameOver;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))

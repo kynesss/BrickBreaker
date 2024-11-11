@@ -3,7 +3,6 @@ using Common;
 using Common.Events;
 using Obstacles;
 using UnityEngine;
-using Utils;
 
 namespace Level
 {
