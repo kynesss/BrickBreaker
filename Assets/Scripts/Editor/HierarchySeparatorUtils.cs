@@ -12,7 +12,11 @@ namespace Editor
         {
             var separator = new GameObject(SeparatorDefaultName)
             {
-                tag = "EditorOnly"
+                tag = "EditorOnly",
+                transform =
+                {
+                    position = Vector3.zero
+                }
             };
 
             Undo.RegisterCreatedObjectUndo(separator, $"Create {SeparatorDefaultName}");
