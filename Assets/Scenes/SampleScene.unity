@@ -163,8 +163,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb7570298f14af241b063845a3ea7d27, type: 2}
   - {fileID: 11400000, guid: 8cd58a52d18e8854da58cd310c07aa23, type: 2}
   brickPrefab: {fileID: 3407819414916868121, guid: 94f042e9a12ef64478ea7b463152945a, type: 3}
-  columnSpacing: 6
-  rowSpacing: 1
+  columnSpacing: 4
+  rowSpacing: 1.45
 --- !u!4 &191026284
 Transform:
   m_ObjectHideFlags: 0
