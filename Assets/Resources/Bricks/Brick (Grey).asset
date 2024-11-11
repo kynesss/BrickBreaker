@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 21300000, guid: f78bb4f03d5300d4ca64831fcb2caea9, type: 3}
   <HitIcon>k__BackingField: {fileID: 21300000, guid: 3b7da559da5c0124fb55006f3dba9ad3, type: 3}
+  <Destructible>k__BackingField: 0
   <Durability>k__BackingField: 9999
