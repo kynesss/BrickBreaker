@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 
 namespace Obstacles
 {
@@ -7,12 +8,12 @@ namespace Obstacles
     {
         [field: SerializeField] public Sprite Icon { get; private set; }
         [field: SerializeField] public Sprite HitIcon { get; private set; }
-        [field: SerializeField][field: Min(1)] public int Durability { get; private set; }
 
-        private void OnValidate()
-        {
-            if (Durability < 1)
-                Durability = 1;
-        }
+        [field: SerializeField] public bool Destructible { get; private set; } = true;
+
+        [field: SerializeField]
+        [field: Min(1)]
+        [field: EnableIf("Destructible")]
+        public int Durability { get; private set; }
     }
 }
