@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using Obstacles;
 using UnityEngine;
 
@@ -12,14 +11,6 @@ namespace Level
 
         [SerializeField] private float columnSpacing = 4f;
         [SerializeField] private float rowSpacing = 1.45f;
-        
-        private LevelDataCollection _levelDataCollection;
-        private const string LevelsFilePath = "levels";
-
-        private void Awake()
-        {
-            LoadLevelDataCollection();
-        }
 
         private void Start()
         {
@@ -28,7 +19,8 @@ namespace Level
 
         private void GenerateLevel(int level)
         {
-            var levelData = _levelDataCollection.Levels[level];
+            var levelDataCollection = LevelDataLoader.LoadLevelDataCollection();
+            var levelData = levelDataCollection.Levels[level];
             
             var centerX = (levelData.Columns - 1) * columnSpacing / 2f;
             var centerY = (levelData.Rows - 1) * rowSpacing / 2f;
@@ -50,12 +42,6 @@ namespace Level
                     brick.Setup(brickData);
                 }   
             }
-        }
-
-        private void LoadLevelDataCollection()
-        {
-            var json = Resources.Load<TextAsset>(LevelsFilePath);
-            _levelDataCollection = JsonConvert.DeserializeObject<LevelDataCollection>(json.text);
         }
     }
 }
