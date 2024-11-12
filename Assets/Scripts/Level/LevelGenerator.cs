@@ -45,9 +45,11 @@ namespace Level
             {
                 for (var j = 0; j < levelData.Columns; j++)
                 {
-                    var brickId = levelData.Layout[j][i] - 1;
-                    var brickData = brickDataCollection[brickId];
+                    var brickId = levelData.Layout[i][j] - 1;
+                    if (brickId < 0)
+                        continue;
                     
+                    var brickData = brickDataCollection[brickId];
                     var brick = Instantiate(brickPrefab, transform);
                     var xPos = j * columnSpacing - centerX + position.x;
                     var yPos = i * rowSpacing - centerY + position.y;
