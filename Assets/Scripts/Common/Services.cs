@@ -8,9 +8,13 @@ namespace Common
     public static class Services
     {
         private static GameManager _gameManager;
-        private static PowerUpManager _powerUpManager;
+        private static PowerUpSpawner _powerUpSpawner;
+        private static PowerUpEffectManager _powerUpEffectManager;
         public static GameManager GameManager => _gameManager ??= FindOrThrow<GameManager>();
-        public static PowerUpManager PowerUpManager => _powerUpManager ??= FindOrThrow<PowerUpManager>();
+        public static PowerUpSpawner PowerUpSpawner => _powerUpSpawner ??= FindOrThrow<PowerUpSpawner>();
+
+        public static PowerUpEffectManager PowerUpEffectManager =>
+            _powerUpEffectManager ??= FindOrThrow<PowerUpEffectManager>();
         
         private static T FindOrThrow<T>() where T : MonoBehaviour, IService
         {

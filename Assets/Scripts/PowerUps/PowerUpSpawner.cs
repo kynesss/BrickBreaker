@@ -3,19 +3,21 @@ using UnityEngine;
 
 namespace PowerUps
 {
-    public class PowerUpManager : MonoBehaviour, IService
+    [RequireComponent(typeof(PowerUpEffectFactory))]
+    public class PowerUpSpawner : MonoBehaviour, IService
     {
         [SerializeField] private PowerUp powerUpPrefab;
-        [SerializeField] private PowerUpEffect[] powerUpEffects;
 
-        private PowerUpEffect GetRandomPowerUpEffect()
+        private PowerUpEffectFactory _factory;
+
+        private void Awake()
         {
-            return powerUpEffects[Random.Range(0, powerUpEffects.Length)];
+            _factory = GetComponent<PowerUpEffectFactory>();
         }
 
         public PowerUp SpawnRandomPowerUp()
         {
-            var effect = GetRandomPowerUpEffect();
+            var effect = _factory.GetRandomPowerUpEffect();
             var powerUp = Instantiate(powerUpPrefab);
             powerUp.Setup(effect);
 

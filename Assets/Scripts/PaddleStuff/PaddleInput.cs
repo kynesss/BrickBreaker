@@ -2,7 +2,7 @@
 using Common.Events;
 using UnityEngine;
 
-namespace Paddle
+namespace PaddleStuff
 {
     public class PaddleInput : MonoBehaviour
     {

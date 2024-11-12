@@ -25,12 +25,14 @@ namespace Obstacles
             _durability.Changed -= OnDurabilityChanged;
         }
 
+        // TODO: Score Manager will notify PowerUpSpawner that brick has been destroyed
         private void OnDurabilityChanged(BrickDurabilityChangedArgs args)
         {
             if (args.IsAlive)
                 return;
             
-            var powerUp = Services.PowerUpManager.SpawnRandomPowerUp();
+            // temp
+            var powerUp = Services.PowerUpSpawner.SpawnRandomPowerUp();
             powerUp.transform.position = transform.position;
         }
 

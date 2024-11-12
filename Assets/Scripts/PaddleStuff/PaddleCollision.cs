@@ -1,7 +1,7 @@
 ﻿using Ball;
 using UnityEngine;
 
-namespace Paddle
+namespace PaddleStuff
 {
     public class PaddleCollision : MonoBehaviour
     {

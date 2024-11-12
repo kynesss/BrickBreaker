@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89849286}
   - component: {fileID: 89849287}
+  - component: {fileID: 89849288}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -167,6 +168,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpPrefab: {fileID: 1719703993759204149, guid: 91baf56df22853643a974ce054122812, type: 3}
+--- !u!114 &89849288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89849285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7befcec502d43729127a225b83c388d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   powerUpEffects:
   - {fileID: 11400000, guid: 6143a6ae870664444ae93311a188d933, type: 2}
 --- !u!4 &191026284 stripped

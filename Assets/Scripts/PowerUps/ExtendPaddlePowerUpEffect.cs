@@ -1,4 +1,4 @@
-﻿using Paddle;
+﻿using PaddleStuff;
 using UnityEngine;
 
 namespace PowerUps
@@ -6,18 +6,25 @@ namespace PowerUps
     [CreateAssetMenu(menuName = "PowerUps/ExtendPaddleEffect", fileName = "ExtendPaddleEffect")]
     public class ExtendPaddlePowerUpEffect : PowerUpEffect
     {
+        [SerializeField] private Sprite regularPaddleSprite;
+        [SerializeField] private Sprite extendedPaddleSprite;
+        
+        private Paddle _paddle;
+        
         public override bool TryApply(GameObject target)
         {
-            if (!target.TryGetComponent<PaddleMovement>(out var paddle))
+            if (!target.TryGetComponent<Paddle>(out var paddle))
                 return false;
-            
-            Debug.Log($"Apply: {nameof(ExtendPaddlePowerUpEffect)}!");
+
+            _paddle = paddle;
+            _paddle.Renderer.sprite = extendedPaddleSprite;
             return true;
         }
 
-        public override void Remove(GameObject target)
+        public override void Remove()
         {
-            Debug.Log($"Remove: {nameof(ExtendPaddlePowerUpEffect)}!");
+            _paddle.Renderer.sprite = regularPaddleSprite;
+            _paddle = null;
         }
     }
 }

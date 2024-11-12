@@ -14,6 +14,6 @@ namespace PowerUps
         public float Duration { get; private set; }
 
         public abstract bool TryApply(GameObject target);
-        public abstract void Remove(GameObject target);
+        public abstract void Remove();
     }
 }

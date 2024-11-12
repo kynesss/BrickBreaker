@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Paddle
+namespace PaddleStuff
 {
     [RequireComponent(typeof(PaddleInput))]
     public class PaddleMovement : MonoBehaviour
