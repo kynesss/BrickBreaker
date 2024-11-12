@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9069917196734864637}
   - component: {fileID: 586763922144555311}
   - component: {fileID: 2389289356908062638}
+  - component: {fileID: 2656463076259842095}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -162,3 +163,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 10
+  bounceSpeedBonus: 1.2
+--- !u!114 &2656463076259842095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244130868660639376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18cc1adafdd74974b5ec96239d480287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceThreshold: 10

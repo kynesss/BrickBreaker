@@ -5,8 +5,6 @@ namespace Paddle
 {
     public class PaddleCollision : MonoBehaviour
     {
-        [SerializeField] private float bounceForce = 0.1f;
-
         private BoxCollider2D _collider;
 
         private void Awake()
@@ -33,7 +31,7 @@ namespace Paddle
             var reflection = Vector2.Reflect(incomingVelocity, normal);
             
             var currentSpeed = incomingVelocity.magnitude;
-            return (reflection + offsetVector).normalized * (currentSpeed + bounceForce);
+            return (reflection + offsetVector).normalized * currentSpeed;
         }
     }
 }
