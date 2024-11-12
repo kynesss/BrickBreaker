@@ -180,8 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7befcec502d43729127a225b83c388d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpEffects:
-  - {fileID: 11400000, guid: 6143a6ae870664444ae93311a188d933, type: 2}
 --- !u!4 &191026284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6616249805787493292, guid: 1e704723d5fd5f748a99e81f195e3d2d, type: 3}
