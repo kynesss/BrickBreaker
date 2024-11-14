@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PowerUps
+namespace PowerUps.Effects
 {
     public class PowerUpEffectFactory : MonoBehaviour
     {

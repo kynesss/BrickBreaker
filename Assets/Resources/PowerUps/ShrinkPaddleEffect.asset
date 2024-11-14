@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d424af91031e45e4b37392e8b3923ae5, type: 3}
-  m_Name: ExtendPaddleEffect
+  m_Name: ShrinkPaddleEffect
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 21300000, guid: b1a651bd74479874b94187cb144bf7e0, type: 3}
   <Duration>k__BackingField: 5
   regularPaddleSprite: {fileID: 21300000, guid: d51c741497e71da4d97c73aabd52d8ce, type: 3}
-  effectPaddleSprite: {fileID: 21300000, guid: edb2e87dcce23354096b1ebdc1ba9676, type: 3}
+  effectPaddleSprite: {fileID: 21300000, guid: 059bcbe6c7d7de74a9431d3730fce049, type: 3}
   regularColliderWidth: 3.789063
-  effectColliderWidth: 5.414063
-  shrinkColliderWidth: 1.796875
+  effectColliderWidth: 1.796875

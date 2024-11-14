@@ -1,5 +1,6 @@
 using System;
 using PowerUps;
+using PowerUps.Effects;
 using UnityEngine;
 using Object = UnityEngine.Object;
 

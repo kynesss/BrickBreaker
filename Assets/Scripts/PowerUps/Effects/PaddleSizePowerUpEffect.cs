@@ -1,16 +1,16 @@
 ﻿using PaddleStuff;
 using UnityEngine;
 
-namespace PowerUps
+namespace PowerUps.Effects
 {
-    [CreateAssetMenu(menuName = "PowerUps/ExtendPaddleEffect", fileName = "ExtendPaddleEffect")]
-    public class ExtendPaddlePowerUpEffect : PowerUpEffect
+    [CreateAssetMenu(menuName = "PowerUps/PaddleSizePowerUpEffect", fileName = "PaddleSizePowerUpEffect")]
+    public class PaddleSizePowerUpEffect : PowerUpEffect
     {
         [SerializeField] private Sprite regularPaddleSprite;
-        [SerializeField] private Sprite extendedPaddleSprite;
+        [SerializeField] private Sprite effectPaddleSprite;
 
         [SerializeField] private float regularColliderWidth = 3.789063f;
-        [SerializeField] private float extendedColliderWidth = 5.414063f;
+        [SerializeField] private float effectColliderWidth;
         
         private Paddle _paddle;
         
@@ -20,7 +20,7 @@ namespace PowerUps
                 return false;
 
             _paddle = paddle;
-            UpdateEffect(extendedPaddleSprite, extendedColliderWidth);
+            UpdateEffect(effectPaddleSprite, effectColliderWidth);
             
             return true;
         }

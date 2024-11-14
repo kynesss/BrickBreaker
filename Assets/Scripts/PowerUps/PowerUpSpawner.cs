@@ -1,4 +1,5 @@
 ﻿using Common;
+using PowerUps.Effects;
 using UnityEngine;
 
 namespace PowerUps

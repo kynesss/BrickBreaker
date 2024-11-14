@@ -1,8 +1,9 @@
 ﻿using System.Collections.Concurrent;
+using System.Linq;
 using Common;
 using UnityEngine;
 
-namespace PowerUps
+namespace PowerUps.Effects
 {
     public class PowerUpEffectManager : MonoBehaviour, IService
     {
@@ -44,15 +45,18 @@ namespace PowerUps
             _activeEffects.Clear();
         }
 
-        public void AddEffect(PowerUpEffect effect)
+        public void AddOrUpdateEffect(PowerUpEffect effect)
         {
-            if (_activeEffects.ContainsKey(effect))
-            {
-                _activeEffects[effect] = effect.Duration;
-                return;
-            }
+            var existingEffect = _activeEffects.Keys.FirstOrDefault(x => x.Type == effect.Type);
 
-            _activeEffects.TryAdd(effect, effect.Duration);
+            if (existingEffect != null)
+            {
+                _activeEffects[existingEffect] = effect.Duration;
+            }
+            else
+            {
+                _activeEffects.TryAdd(effect, effect.Duration);
+            }
         }
     }
 }

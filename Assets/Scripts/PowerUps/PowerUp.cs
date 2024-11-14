@@ -1,4 +1,5 @@
 ﻿using Common;
+using PowerUps.Effects;
 using UnityEngine;
 
 namespace PowerUps
@@ -24,7 +25,7 @@ namespace PowerUps
 
         private void OnEffectApplied()
         {
-            Services.PowerUpEffectManager.AddEffect(_effect);
+            Services.PowerUpEffectManager.AddOrUpdateEffect(_effect);
             Destroy(gameObject);
         }
 
