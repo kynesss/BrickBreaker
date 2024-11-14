@@ -8,6 +8,9 @@ namespace PowerUps
     {
         [SerializeField] private Sprite regularPaddleSprite;
         [SerializeField] private Sprite extendedPaddleSprite;
+
+        [SerializeField] private float regularColliderWidth = 3.789063f;
+        [SerializeField] private float extendedColliderWidth = 5.414063f;
         
         private Paddle _paddle;
         
@@ -17,14 +20,21 @@ namespace PowerUps
                 return false;
 
             _paddle = paddle;
-            _paddle.Renderer.sprite = extendedPaddleSprite;
+            UpdateEffect(extendedPaddleSprite, extendedColliderWidth);
+            
             return true;
         }
 
         public override void Remove()
         {
-            _paddle.Renderer.sprite = regularPaddleSprite;
+            UpdateEffect(regularPaddleSprite, regularColliderWidth);
             _paddle = null;
+        }
+
+        private void UpdateEffect(Sprite sprite, float width)
+        {
+            _paddle.Renderer.sprite = sprite;
+            _paddle.Collider.size = new Vector2(width, _paddle.Collider.size.y);
         }
     }
 }

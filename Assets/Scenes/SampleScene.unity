@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 4561174452748293853, guid: 844004a7e8afce742b2fceb0fcf3fff3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.7890625
+      objectReference: {fileID: 0}
     - target: {fileID: 9153760233128913330, guid: 844004a7e8afce742b2fceb0fcf3fff3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
