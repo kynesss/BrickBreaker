@@ -10,6 +10,7 @@ namespace Obstacles
         [field: SerializeField] public Sprite HitIcon { get; private set; }
 
         [field: SerializeField] public bool Destructible { get; private set; } = true;
+        [field: SerializeField] public int Points { get; private set; }
 
         [field: SerializeField]
         [field: Min(1)]
