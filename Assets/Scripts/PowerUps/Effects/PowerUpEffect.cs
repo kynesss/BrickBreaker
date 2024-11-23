@@ -12,7 +12,11 @@ namespace PowerUps.Effects
         [field: SerializeField]
         [field: BoxGroup("Base")]
         public float Duration { get; private set; }
-        
+
+        [field: SerializeField]
+        [field: BoxGroup("Base")]
+        public int DropChance { get; private set; }
+
         [field: SerializeField]
         [field: BoxGroup("Base")]
         public PowerUpEffectType Type { get; private set; }

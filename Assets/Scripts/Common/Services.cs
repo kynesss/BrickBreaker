@@ -1,6 +1,7 @@
 using System;
 using PowerUps;
 using PowerUps.Effects;
+using Score;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -11,11 +12,13 @@ namespace Common
         private static GameManager _gameManager;
         private static PowerUpSpawner _powerUpSpawner;
         private static PowerUpEffectManager _powerUpEffectManager;
+        private static ScoreManager _scoreManager;
         public static GameManager GameManager => _gameManager ??= FindOrThrow<GameManager>();
         public static PowerUpSpawner PowerUpSpawner => _powerUpSpawner ??= FindOrThrow<PowerUpSpawner>();
 
         public static PowerUpEffectManager PowerUpEffectManager =>
             _powerUpEffectManager ??= FindOrThrow<PowerUpEffectManager>();
+        public static ScoreManager ScoreManager => _scoreManager ??= FindOrThrow<ScoreManager>();
         
         private static T FindOrThrow<T>() where T : MonoBehaviour, IService
         {

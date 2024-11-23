@@ -15,4 +15,5 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 21300000, guid: 1aaa9500168055f43849e195d1598253, type: 3}
   <HitIcon>k__BackingField: {fileID: 21300000, guid: 4bfac8dd477dc774fbc70d417f2927c0, type: 3}
   <Destructible>k__BackingField: 0
+  <Points>k__BackingField: 100
   <Durability>k__BackingField: 9999

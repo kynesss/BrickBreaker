@@ -24,5 +24,18 @@ namespace PowerUps
 
             return powerUp;
         }
+        
+        public bool TrySpawnPowerUp(out PowerUp powerUp)
+        {
+            var canDropPowerUp = Random.Range(0f, 100f) <= 20f;
+            if (canDropPowerUp == false) 
+                powerUp = null;
+
+            var effect = _factory.GetRandomPowerUpByDropChance();
+            powerUp = Instantiate(powerUpPrefab);
+            powerUp.Setup(effect);
+
+            return true;
+        }
     }
 }

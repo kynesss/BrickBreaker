@@ -8,6 +8,7 @@ namespace Obstacles
     {
         private BrickDurability _durability;
         private BrickSpriteHandler _spriteHandler;
+        private BrickData _data;
 
         private void Awake()
         {
@@ -24,20 +25,35 @@ namespace Obstacles
         {
             _durability.Changed -= OnDurabilityChanged;
         }
-
-        // TODO: Score Manager will notify PowerUpSpawner that brick has been destroyed
+        
         private void OnDurabilityChanged(BrickDurabilityChangedArgs args)
         {
             if (args.IsAlive)
                 return;
-            
-            // temp
-            var powerUp = Services.PowerUpSpawner.SpawnRandomPowerUp();
-            powerUp.transform.position = transform.position;
+
+            AwardPoints();
+            SpawnPowerUp();
+        }
+
+        private void AwardPoints()
+        {
+            var score = _data.Points;
+            Services.ScoreManager.AddScore(score);
+        }
+
+        private void SpawnPowerUp()
+        {
+            var powerUpSpawner = Services.PowerUpSpawner;
+            if (powerUpSpawner.TrySpawnPowerUp(out var powerUp))
+            {
+                powerUp.transform.position = transform.position;
+            }
         }
 
         public void Setup(BrickData data)
         {
+            _data = data;
+            
             _durability.Setup(data);
             _spriteHandler.Setup(data);
         }

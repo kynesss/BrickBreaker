@@ -29,7 +29,8 @@ namespace Level
             if (args.NewState != GameState.Gameplay)
                 return;
             
-            GenerateLevel(args.CurrentLevel);
+            //GenerateLevel(args.CurrentLevel);
+            GenerateLevel(10);
         }
 
         private void GenerateLevel(int level)
