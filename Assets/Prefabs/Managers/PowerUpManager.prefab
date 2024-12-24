@@ -74,3 +74,7 @@ MonoBehaviour:
   powerUpEffects:
   - {fileID: 11400000, guid: 6143a6ae870664444ae93311a188d933, type: 2}
   - {fileID: 11400000, guid: ddb3f862937f433438321109bcf69884, type: 2}
+  - {fileID: 11400000, guid: 90caa7bd324a4cf40bd98630475d3a96, type: 2}
+  - {fileID: 11400000, guid: d010f8f135250134d8d976fdbac08e2f, type: 2}
+  - {fileID: 11400000, guid: 4fd1c0f229edcae4cab0efc3157b1f55, type: 2}
+  - {fileID: 11400000, guid: 9206350befa5e44449ee3671a263eb57, type: 2}

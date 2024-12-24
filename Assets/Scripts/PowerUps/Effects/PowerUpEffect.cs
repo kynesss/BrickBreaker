@@ -1,4 +1,5 @@
 ﻿using NaughtyAttributes;
+using PaddleStuff;
 using UnityEngine;
 
 namespace PowerUps.Effects
@@ -20,7 +21,6 @@ namespace PowerUps.Effects
         [field: SerializeField]
         [field: BoxGroup("Base")]
         public PowerUpEffectType Type { get; private set; }
-
         public abstract bool TryApply(GameObject target);
         public abstract void Remove();
     }

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 21300000, guid: b1a651bd74479874b94187cb144bf7e0, type: 3}
   <Duration>k__BackingField: 5
+  <DropChance>k__BackingField: 9
+  <Type>k__BackingField: 0
   regularPaddleSprite: {fileID: 21300000, guid: d51c741497e71da4d97c73aabd52d8ce, type: 3}
   effectPaddleSprite: {fileID: 21300000, guid: edb2e87dcce23354096b1ebdc1ba9676, type: 3}
   regularColliderWidth: 3.789063
   effectColliderWidth: 5.414063
-  shrinkColliderWidth: 1.796875

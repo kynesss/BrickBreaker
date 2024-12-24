@@ -2,6 +2,6 @@
 {
     public enum PowerUpEffectType
     {
-        Size, Damage
+        Size, Damage, Score
     }
 }

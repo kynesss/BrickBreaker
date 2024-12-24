@@ -11,7 +11,7 @@ namespace PowerUps.Effects
 
         [SerializeField] private float regularColliderWidth = 3.789063f;
         [SerializeField] private float effectColliderWidth;
-        
+
         private Paddle _paddle;
         
         public override bool TryApply(GameObject target)
@@ -28,7 +28,6 @@ namespace PowerUps.Effects
         public override void Remove()
         {
             UpdateEffect(regularPaddleSprite, regularColliderWidth);
-            _paddle = null;
         }
 
         private void UpdateEffect(Sprite sprite, float width)
