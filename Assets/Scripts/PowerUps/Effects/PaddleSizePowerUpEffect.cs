@@ -27,8 +27,8 @@ namespace PowerUps.Effects
 
         public override void Remove()
         {
-            _paddle = null;
             UpdateEffect(regularPaddleSprite, regularColliderWidth);
+            _paddle = null;
         }
 
         private void UpdateEffect(Sprite sprite, float width)
